@@ -1,0 +1,149 @@
+{
+    "champions": [
+    {
+      "id": 1,
+      "name": "厄薩斯",
+      "slug": "/aatrox",
+      "eng": "Aatrox",
+      "role": "fighter",
+      "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
+      "skins":[
+        {
+          "name": "原始造型",
+          "eng": "Origin",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg"
+        },
+        {
+          "name": "審判者 厄薩斯",
+          "eng": "Justicar Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_2.jpg"
+        },
+        {
+          "name": "海洋獵人 厄薩斯",
+          "eng": "Sea Hunter Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_3.jpg"
+        },
+        {
+          "name": "血月劍魔 厄薩斯",
+          "eng": "Blood Moon Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_7.jpg"
+        },
+        {
+          "name": "尊爵不凡 血月劍魔 厄薩斯",
+          "eng": "Prestige Blood Moon Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_8.jpg"
+        },
+        {
+          "name": "戰爭英雄 厄薩斯",
+          "eng": "Victorious Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_9.jpg"
+        },
+        {
+          "name": "奧德賽 厄薩斯",
+          "eng": "Odyssey Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_11.jpg"
+        },
+        {
+          "name": "尊爵不凡 血月劍魔 厄薩斯 2022",
+          "eng": "Prestige Blood Moon Aatrox(2022)",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_20.jpg"
+        },
+        {
+          "name": "月蝕使者 厄薩斯",
+          "eng": "Lunar Eclipse Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_21.jpg"
+        },
+        {
+          "name": "DRX 厄薩斯",
+          "eng": "DRX Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_30.jpg"
+        },
+        {
+          "name": "尊爵不凡 DRX 厄薩斯",
+          "eng": "Prestige DRX Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_31.jpg"
+        }
+        
+      ]
+    },
+    {
+      "id": 2,
+      "name": "巴德",
+      "slug": "/bard",
+      "eng": "Bard",
+      "role": "support",
+      "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbbe3ce0c0ae1305b/5db05fb23a326d6df6c0e7b3/RiotX_ChampionList_bard.jpg?quality=90&width=250",
+      "skins":[
+        {
+          "name": "原始造型",
+          "eng": "Origin",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg"
+        },
+        {
+          "name": "神木精靈 巴德",
+          "eng": "Elderwood Bard",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_1.jpg"
+        },
+        {
+          "name": "霜降使者 巴德",
+          "eng": "Snow Day Bard",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_5.jpg"
+        }
+        ,
+        {
+          "name": "吟遊詩人 巴德",
+          "eng": "Bard Bard",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_6.jpg"
+        }
+        ,
+        {
+          "name": "宇宙漫遊者 巴德",
+          "eng": "Astronaunt Bard",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_8.jpg"
+        }
+        ,
+        {
+          "name": "咖啡廳執事 巴德",
+          "eng": "Cafe Cuties Bard",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_17.jpg"
+        }
+        ,
+        {
+          "name": "山海卷軸 巴德",
+          "eng": "Shan Hai Scrolls Bard",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_26.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "凱特琳",
+      "slug": "/caitlyn",
+      "eng": "Caitlyn",
+      "role": "marksman",
+      "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
+      "skins":[
+        {
+          "name": "原始造型",
+          "eng": "Origin",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg"
+        },
+        {
+          "name": "政府反抗軍 凱特琳",
+          "eng": "Resistance Caitlyn",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_1.jpg"
+        },
+        {
+          "name": "荒野保安官 凱特琳",
+          "eng": "Sheriff Caitlyn",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_2.jpg"
+        }
+      ]
+    }
+  ]
+}
