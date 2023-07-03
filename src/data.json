@@ -3,7 +3,6 @@
     {
       "id": 1,
       "name": "厄薩斯",
-      "slug": "/aatrox",
       "eng": "Aatrox",
       "role": "fighter",
       "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
@@ -11,62 +10,74 @@
         {
           "name": "原始造型",
           "eng": "Origin",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
+          "url": "https://youtu.be/0iiGWVhUqLA"
         },
         {
           "name": "審判者 厄薩斯",
           "eng": "Justicar Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg",
+          "url": "https://youtu.be/bRuK5ae8-5U"
         },
         {
           "name": "機甲獵人 厄薩斯",
           "eng": "Mecha Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_2.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_2.jpg",
+          "url": "https://youtu.be/4Dqo30GnIBk"
         },
         {
           "name": "海洋獵人 厄薩斯",
           "eng": "Sea Hunter Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_3.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_3.jpg",
+          "url": "https://youtu.be/NLzntj9ahJQ"
         },
         {
           "name": "血月劍魔 厄薩斯",
           "eng": "Blood Moon Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_7.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_7.jpg",
+          "url": "https://youtu.be/zJuuUY1Cvb0"
         },
         {
           "name": "尊爵不凡 血月劍魔 厄薩斯",
           "eng": "Prestige Blood Moon Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_8.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_8.jpg",
+          "url": "https://youtu.be/XWrQUC-AYYI"
         },
         {
           "name": "戰爭英雄 厄薩斯",
           "eng": "Victorious Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_9.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_9.jpg",
+          "url": "https://youtu.be/w2-O6c9e-aE"
         },
         {
           "name": "奧德賽 厄薩斯",
           "eng": "Odyssey Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_11.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_11.jpg",
+          "url": "https://youtu.be/HElpRB4J3yU"
         },
         {
           "name": "尊爵不凡 血月劍魔 厄薩斯 2022",
           "eng": "Prestige Blood Moon Aatrox(2022)",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_20.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_20.jpg",
+          "url": "https://youtu.be/VD4loc6dKHQ"
         },
         {
           "name": "月蝕使者 厄薩斯",
           "eng": "Lunar Eclipse Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_21.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_21.jpg",
+          "url": "https://youtu.be/Z0EliTUjGJU"
         },
         {
           "name": "DRX 厄薩斯",
           "eng": "DRX Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_30.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_30.jpg",
+          "url": "https://youtu.be/dxngHkJhReY"
         },
         {
           "name": "尊爵不凡 DRX 厄薩斯",
           "eng": "Prestige DRX Aatrox",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_31.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_31.jpg",
+          "url": "https://youtu.be/L9uGgnCJmO4"
         }
         
       ]
@@ -74,7 +85,6 @@
     {
       "id": 2,
       "name": "巴德",
-      "slug": "/bard",
       "eng": "Bard",
       "role": "support",
       "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbbe3ce0c0ae1305b/5db05fb23a326d6df6c0e7b3/RiotX_ChampionList_bard.jpg?quality=90&width=250",
@@ -82,48 +92,54 @@
         {
           "name": "原始造型",
           "eng": "Origin",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg",
+          "url": "https://youtu.be/-tNDoXIYptk"
         },
         {
           "name": "神木精靈 巴德",
           "eng": "Elderwood Bard",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_1.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_1.jpg",
+          "url": "https://youtu.be/115huoS7p4Q"
         },
         {
           "name": "霜降使者 巴德",
           "eng": "Snow Day Bard",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_5.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_5.jpg",
+          "url": "https://youtu.be/N3kiW-R_-Hg"
         }
         ,
         {
           "name": "吟遊詩人 巴德",
           "eng": "Bard Bard",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_6.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_6.jpg",
+          "url": "https://youtu.be/CjQeLObqdaw"
         }
         ,
         {
           "name": "宇宙漫遊者 巴德",
           "eng": "Astronaunt Bard",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_8.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_8.jpg",
+          "url": "https://youtu.be/0-D38clPAFI"
         }
         ,
         {
           "name": "咖啡廳執事 巴德",
           "eng": "Cafe Cuties Bard",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_17.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_17.jpg",
+          "url": "https://youtu.be/7WOf2Ju-KGE"
         }
         ,
         {
           "name": "山海卷軸 巴德",
           "eng": "Shan Hai Scrolls Bard",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_26.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_26.jpg",
+          "url": "https://youtu.be/adH4ernESoM"
         }
       ]
     },
     {
       "id": 3,
       "name": "凱特琳",
-      "slug": "/caitlyn",
       "eng": "Caitlyn",
       "role": "marksman",
       "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
@@ -131,17 +147,20 @@
         {
           "name": "原始造型",
           "eng": "Origin",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
+          "url": "https://youtu.be/KFNFY6-gaDA"
         },
         {
           "name": "政府反抗軍 凱特琳",
           "eng": "Resistance Caitlyn",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_1.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_1.jpg",
+          "url": "https://youtu.be/lisdge0Kpho"
         },
         {
           "name": "荒野保安官 凱特琳",
           "eng": "Sheriff Caitlyn",
-          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_2.jpg"
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_2.jpg",
+          "url": "https://youtu.be/68UTIQpvN0I"
         }
       ]
     }

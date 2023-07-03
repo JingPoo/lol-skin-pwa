@@ -14,7 +14,7 @@ const bg_css = computed(()=>{
     <div class="champion_container">
         <div class="cover" :style="bg_css">
             <div class="text">
-                <h2>{{ champion.name }}</h2>
+                <h3>{{ champion.name }}</h3>
                 <h3>{{ champion.eng }}</h3>
             </div>
         </div>
@@ -25,24 +25,32 @@ const bg_css = computed(()=>{
 </template>
 <style scoped>
 .champion_container{
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     display: flex;
+    cursor: pointer;
 }
 .cover{
     width: 100%;
     height: 100%;
     position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
 }
 .cover .text{
-    width: 100%;
+    width: 80%;
     color: white;
     background-color: rgba(0,0,0,.5);
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+}
+.text h3{
+    font-size: 16px;
 }
 .skins{
     width: 50%;

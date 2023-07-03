@@ -1,5 +1,7 @@
 <script setup>
 import TheNavigation from '@/components/TheNavigation.vue';
+import { useRoute } from 'vue-router';
+const route = useRoute()
 </script>
 
 <template>
@@ -13,18 +15,21 @@ import TheNavigation from '@/components/TheNavigation.vue';
 *{
   padding: 0;
   margin: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 html,body{
   height: 100vh;
 }
-.nav-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.view-container{
+  width: 100vw;
 }
-.nav-container a{
-  text-decoration: none;
+/* .fade-enter,
+.fade-leave-to{
+  opacity: 0;
 }
-
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity .3s;
+} */
 </style>

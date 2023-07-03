@@ -20,17 +20,13 @@ const champions = sourceData.champions
   </div>
 </template>
 
-<style>
+<style scoped>
 *{
   padding: 0;
   margin: 0;
 }
-html,body{
-  height: 100vh;
-}
 .container{
   width: 100%;
-  height: 100%;
   padding: 10px 20px;
 }
 .champion_list{

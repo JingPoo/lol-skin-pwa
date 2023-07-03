@@ -2,18 +2,7 @@
 import { computed } from "vue"
 import sourceData from '@/data.json'
 import Skin from '@/components/Skin.vue'
-
-const props = defineProps({
-    id: {
-        type: Number,
-        required: true
-    }
-})
-const champions = sourceData.champions
-const champion = computed(()=>{
-    return champions.find(champion => champion.id === props.id)
-})
-
+import GoBack from '@/components/GoBack.vue'
 // import axios from 'axios'
 // const champion = ref(null)
 // // 因為頁面共用此component，需要每次update後重新取api data
@@ -25,43 +14,117 @@ const champion = computed(()=>{
 //         console.log(err)
 //     })
 // }) 
+const props = defineProps({
+    id: {
+        type: Number,
+        required: true
+    }
+})
+const champions = sourceData.champions
+const champion = computed(()=>{
+    return champions.find(champion => champion.id === props.id)
+})
+const bg_css = computed(()=>{
+    return {
+        background: `url(${champion.value.cover}) repeat center / 7%`
+    }
+})
 </script>
 <template>
-    <!-- 因為共用component，v-if防止轉換時抓不到champion -->
-    <section class="champions" v-if="champion">
-        <h1>{{ champion.name }}</h1>
-        <h2>{{ champion.eng }}</h2>
-        <h3>{{ champion.role }}</h3>
-    </section>
-    <section class="skins">
-        <h2> Skins of {{ champion.eng }}</h2>
-        <div class="cards">
-            <router-link
-                v-for="(skin, index) in champion.skins"
-                :key="index"
-                :to="{name: 'skin.show', params:{skinSlug: skin.eng}}"
-            >
-                <Skin :skin="skin"></Skin>
-            </router-link>
+    <div class="champion-page">
+        <!-- 因為共用component，v-if防止轉換時抓不到champion -->
+        <div class="champion" v-if="champion" :style="bg_css">
+            <img :src="champion.cover">
+            <div class="info">
+                <h1>{{ champion.name }}</h1>
+                <h2>{{ champion.eng }}</h2>
+                <h3>角色定位: {{ champion.role }}</h3>
+                <!-- <GoBack></GoBack> -->
+            </div>
         </div>
-        <router-view></router-view>
-    </section>
+        <div class="skins">
+            <h2> Skins of {{ champion.name }}</h2>
+            <div class="cards">
+                <router-link
+                    v-for="(skin, index) in champion.skins"
+                    :key="index"
+                    :to="{name: 'skin.show', params:{skinSlug: skin.eng}}"
+                >
+                    <Skin :skin="skin"></Skin>
+                </router-link>
+            </div>
+            <router-view></router-view>
+        </div>
+        
+    </div>
 </template>
-<style>
-.champions{
+<style scoped>
+.champion-page{
     width: 100%;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.champion{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.champion::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,.4);
+}
+.champion > img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0px 0px 10px black;
+}
+.champion .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.go-back{
+    position: absolute;
+    top: -10px;
+    right: -30px;
 }
 .skins{
     width: 100%;
-    height: auto;
+    background-color: #ddd;
+    padding: 10px 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.skins > h2{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #272d5b;
 }
 .skins .cards{
     width: 100%;
+    height: 180px;
     display: flex;
+    align-items: center;
     gap: 10px;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 </style>
