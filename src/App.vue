@@ -12,6 +12,11 @@ const route = useRoute()
 </template>
 
 <style>
+:root{
+  --main-color: #4E7AB1;
+  --second-color: #7860D2;
+  --complement-color: #D4BB9D;
+}
 *{
   padding: 0;
   margin: 0;

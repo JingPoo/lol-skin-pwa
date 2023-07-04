@@ -4,7 +4,7 @@
       "id": 1,
       "name": "厄薩斯",
       "eng": "Aatrox",
-      "role": "fighter",
+      "role": "鬥士",
       "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
       "skins":[
         {
@@ -86,7 +86,7 @@
       "id": 2,
       "name": "巴德",
       "eng": "Bard",
-      "role": "support",
+      "role": "輔助",
       "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbbe3ce0c0ae1305b/5db05fb23a326d6df6c0e7b3/RiotX_ChampionList_bard.jpg?quality=90&width=250",
       "skins":[
         {
@@ -141,7 +141,7 @@
       "id": 3,
       "name": "凱特琳",
       "eng": "Caitlyn",
-      "role": "marksman",
+      "role": "射手",
       "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
       "skins":[
         {

@@ -18,7 +18,7 @@ const champions = sourceData.champions
 .nav-container{
   width: 100%;
   height: 50px;
-  background-color: #272d5b;
+  background-color: var(--main-color);
   position: sticky;
   top: 0;
   display: flex;
@@ -32,12 +32,12 @@ const champions = sourceData.champions
     color: #ffffff;
 }
 .nav-container a:hover{
-    color: #ecd0a2;
+    color: var(--complement-color);
 }
 .nav-container a.router-link-active,
 .nav-container a.router-link-exact-active{
     font-weight: bolder;
-    color: #ecd0a2;
+    color: var(--complement-color);
 }
 #logo{
     font-size: 22px;
