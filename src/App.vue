@@ -13,7 +13,7 @@ const route = useRoute()
 
 <style>
 :root{
-  --main-color: #4E7AB1;
+  --main-color: #272d5b;
   --second-color: #7860D2;
   --complement-color: #D4BB9D;
 }

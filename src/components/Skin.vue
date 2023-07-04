@@ -58,4 +58,50 @@ const bg_css = computed(()=>{
 .text h3{
     text-align: center;
 }
+
+/* For Small Device */
+@media all and (min-width: 414px) and (max-width: 768px){
+    
+}
+/* For Medium Device */  
+@media all and (min-width: 768px) and (max-width: 992px){
+
+}
+/* For Large Device */  
+@media all and (min-width: 992px){
+    .skin_container{
+        width: 200px;
+        height: 150px;
+        display: flex;
+    }
+    .skin_container:hover .cover .text{
+        opacity: 1;
+    }
+    .cover{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 10px;
+    }
+    .cover .text{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        color: white;
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 10px;
+    }
+    .text h2,
+    .text h3{
+        text-align: center;
+    }
+}
 </style>

@@ -67,16 +67,16 @@ const queryChampions = computed(()=>{
 }
 .top-bar{
   width: 100%;
-  height: 40px;
+  height: 80px;
   display: flex;
+  flex-direction: column;
 }
 .search-box{
-  width: 250px;
+  width: 100%;
   height: 40px;
   padding: 4px 8px;
   border: 2px solid #aaa;
-  border-bottom: none;
-  border-radius: 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
 }
 .search-box:hover i{
   color: var(--second-color);
@@ -98,19 +98,18 @@ const queryChampions = computed(()=>{
   outline: none;
 }
 .role-box{
-  width: calc(100% - 250px);
+  width: 100%;
   height: 40px;
   background-color: #dee5ec;
   border: 2px solid #aaa;
-  border-left: none;
+  border-top: none;
   border-bottom: none;
-  border-radius: 0px 10px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .role-box button{
-  width: 70px;
+  width: calc(100% / 7);
   height: 100%;
   font-size: 16px;
   color: #aaa;
@@ -125,7 +124,7 @@ const queryChampions = computed(()=>{
 .role-box button.active{
   position: relative;
   top: 1px;
-  height: 40px;
+  height: 41px;
   color: rgb(105, 104, 104);
   background-color: #fff;
   font-weight: bolder;
@@ -134,8 +133,102 @@ const queryChampions = computed(()=>{
   width: 100%;
   height: 100%;
   border: 2px solid #aaa;
-  padding: 10px 20px;
+  padding: 10px 20px 20px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
 }
+.champion-list > a{
+  margin: auto;
+}
+
+  /* For Small Device */
+  @media all and (min-width: 414px) and (max-width: 768px){
+
+  }
+  /* For Medium Device */  
+  @media all and (min-width: 768px) and (max-width: 992px){
+
+  }
+  /* For Large Device */  
+  @media all and (min-width: 992px){
+    .container{
+      width: 100%;
+      padding: 10px 20px;
+    }
+    .top-bar{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+    }
+    .search-box{
+      width: 250px;
+      height: 40px;
+      padding: 4px 8px;
+      border: 2px solid #aaa;
+      border-bottom: none;
+      border-radius: 10px 0px 0px;
+    }
+    .search-box:hover i{
+      color: var(--second-color);
+    }
+    .search-box > i{
+      width: 20px;
+      font-size: 20px;
+      color: #aaa;
+      /* background-color: black; */
+    }
+    .search-box > input{
+      width: calc(100% - 24px);
+      font-size: 20px;
+      font-weight: bolder;
+      padding: 2px 4px;
+      margin-left: 4px;
+      /* background-color: red; */
+      border: none;
+      outline: none;
+    }
+    .role-box{
+      width: calc(100% - 250px);
+      height: 40px;
+      background-color: #dee5ec;
+      border: 2px solid #aaa;
+      border-left: none;
+      border-bottom: none;
+      border-radius: 0px 10px 0px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .role-box button{
+      width: 70px;
+      height: 100%;
+      font-size: 16px;
+      color: #aaa;
+      background-color: rgba(255,255,255,0);
+      border: none;
+      cursor: pointer;
+    }
+    .role-box button:hover{
+      color: rgb(105, 104, 104);
+      font-weight: bolder;
+    }
+    .role-box button.active{
+      position: relative;
+      top: 1px;
+      height: 40px;
+      color: rgb(105, 104, 104);
+      background-color: #fff;
+      font-weight: bolder;
+    }
+    .champion-list{
+      width: 100%;
+      height: 100%;
+      border: 2px solid #aaa;
+      padding: 10px 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
 </style>

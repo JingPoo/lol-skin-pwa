@@ -25,8 +25,8 @@ const bg_css = computed(()=>{
 </template>
 <style scoped>
 .champion_container{
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     display: flex;
     cursor: pointer;
 }
@@ -50,12 +50,58 @@ const bg_css = computed(()=>{
     gap: 5px;
 }
 .text h3{
-    font-size: 16px;
+    font-size: 12px;
 }
 .skins{
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+/* For Small Device */
+@media all and (min-width: 414px) and (max-width: 768px){
+    
+}
+/* For Medium Device */  
+@media all and (min-width: 768px) and (max-width: 992px){
+
+}
+/* For Large Device */  
+@media all and (min-width: 992px){
+    .champion_container{
+        width: 150px;
+        height: 150px;
+        display: flex;
+        cursor: pointer;
+    }
+    .cover{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .cover .text{
+        width: 80%;
+        color: white;
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        bottom: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .text h3{
+        font-size: 16px;
+    }
+    .skins{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 </style>

@@ -1,8 +1,10 @@
 <script setup>
-import { computed } from "vue"
+import { ref, computed, onMounted } from "vue"
 import sourceData from '@/data.json'
 import Youtube from 'vue3-youtube'
 
+// const iframeWidth = ref('400')
+// const iframeHeight = ref('200')
 const props = defineProps({
     id: {
         type: Number,
@@ -13,6 +15,17 @@ const props = defineProps({
         required: true
     }
 })
+// onMounted(()=>{
+//     // iframeWidth.value = document.querySelector('.skinImg').width
+//     // iframeHeight.value = document.querySelector('.skinImg').height
+//     window.addEventListener('resize', ()=>{
+//         console.log(document.querySelector('.skinImg').width)
+//         console.log(document.querySelector('.skinImg').height)
+//         console.log(iframeWidth.value, iframeHeight.value)
+//         iframeWidth.value = document.querySelector('.skinImg').width
+//         iframeHeight.value = document.querySelector('.skinImg').height
+//     })
+// })
 const champions = sourceData.champions
 const champion = computed(()=>{
     return champions.find(champion => champion.id === props.id)
@@ -20,22 +33,31 @@ const champion = computed(()=>{
 const skin = computed(()=>{
     return champion.value.skins.find(skin => skin.eng === props.skinSlug)
 })
+const urlHandler = ((url)=>{
+    return url.replace(".be/", "be.com/embed/")
+})
 </script>
 <template>
     <div class="skin-page">
         <!-- 因為共用component，v-if防止轉換時抓不到champion -->
         <div class="skins" v-if="skin">
-            <div class="left-part">
+            <div class="text">
                 <h1>{{ skin.name }}</h1>
                 <h2>{{ skin.eng }}</h2>
-                <img :src="skin.cover" >
             </div>
-            <div class="right-part">
+            <div class="imgvid">
+                <img class="skinImg" :src="skin.cover">
                 <!-- youtube video --> 
-                <Youtube
+                <div class="video-container">
+                    <iframe :src="urlHandler(skin.url)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- <Youtube
+                    class="youtube"
                     :src="skin.url"
                     ref="youtube"
-                ></Youtube>
+                    :width="iframeWidth"
+                    :height="iframeHeight"
+                ></Youtube> -->
+                </div>
             </div>
         </div>
     </div>
@@ -44,41 +66,83 @@ const skin = computed(()=>{
 <style scoped>
 .skin-page{
     width: 100%;
+    padding-top: 20px;
 }
 .skins{
     width: 100%;
     height: 500px;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
-.left-part,
-.right-part{
-    width: 50%;
-    height: 100%;
-}
-.left-part{
-    background-color: #8d9a76;
+.skins .text{
+    width: 100%;
+    height: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.right-part{
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(179, 134, 134);
 }
-.skins .name{
+.text h1{
+    font-size: 26px;
+}
+.text h2{
+    font-size: 22px;
+}
+.skins .imgvid{
     width: 100%;
-    font-size: 14px;
+    height: calc(100% - 60px);
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
-.skins img{
-    width: 600px;
-    height: 400px;
+.imgvid img,
+.imgvid .video-container{
+    width: 100%;
+    height: 50%;
 }
-
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+    /* aspect-ratio: 16 / 9; */
+} 
+/* For Small Device */
+@media all and (min-width: 414px) and (max-width: 768px){
+    .skins{
+        height: 700px;
+    }
+}
+/* For Medium Device */  
+@media all and (min-width: 768px) and (max-width: 992px){
+    .skins{
+        height: 1000px;
+    }
+}
+/* For Large Device */  
+@media all and (min-width: 992px){
+    .skins{
+        height: 500px;
+    }
+    .skins .text{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .skins .imgvid{
+        flex-direction: row;
+    }
+    .imgvid img,
+    .imgvid .video-container{
+        width: 50%;
+        height: 100%;
+    }
+    .video-container iframe{
+        width: 100%;
+        height: 100%;
+        /* aspect-ratio: 16 / 9; */
+    } 
+}
 </style>

@@ -25,6 +25,7 @@ const champions = sourceData.champions
   justify-content: center;
   align-items: center;
   gap: 10px;
+  box-shadow: 0px 0px 5px black;
   z-index: 999;
 }
 .nav-container a{
