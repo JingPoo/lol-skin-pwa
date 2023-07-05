@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h1>Not Found</h1>
         <p>
             Try going
@@ -7,3 +7,11 @@
         </p>
     </div>
 </template>
+<style scoped>
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>

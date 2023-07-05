@@ -1,13 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import sourceData from '@/data.json'
-// import Aatrox from '@/views/Aatrox.vue'
-// import Ahri from '@/views/Ahri.vue'
-// import Caitlyn from '@/views/Caitlyn.vue'
 
 const routes = [
+    {path: '/', redirect: { name: 'Home' }},
     {path: '/vue-lol-skins/', name: 'Home', component: Home, alias: '/home'},
-    // {path: '/aatrox', name: 'aatrox', component: ()=>import('@/views/Aatrox.vue')},
     {
         path: '/vue-lol-skins/champion/:id/:slug', 
         name: 'champion.show', 

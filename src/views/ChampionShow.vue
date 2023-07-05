@@ -2,7 +2,7 @@
 import { ref, computed} from "vue"
 import sourceData from '@/data.json'
 import Skin from '@/components/Skin.vue'
-import GoBack from '@/components/GoBack.vue'
+// import GoBack from '@/components/GoBack.vue'
 // import axios from 'axios'
 // const champion = ref(null)
 // // 因為頁面共用此component，需要每次update後重新取api data

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref} from 'vue'
 import sourceData from '@/data.json'
 const champions = sourceData.champions
 const roles = ref([
@@ -26,17 +26,8 @@ const roles = ref([
                         {{ champion.name }}
                     </router-link>
                 </ul>
-                
             </li>
-                
         </ul>
-        <!-- <router-link 
-        v-for="champion in champions" 
-        :key="champion.id"
-        :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}"
-        :champion="champion">
-            {{ champion.name }}
-        </router-link> -->
     </div>
 </template>
 <style scoped>

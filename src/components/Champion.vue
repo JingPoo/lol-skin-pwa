@@ -1,5 +1,5 @@
 <script setup>
-import {computed, ref} from 'vue'
+import {computed} from 'vue'
 const props = defineProps({
     champion: Object
 })
@@ -18,9 +18,6 @@ const bg_css = computed(()=>{
                 <h3>{{ champion.eng }}</h3>
             </div>
         </div>
-        <!-- <div class="skins">
-            <img :src="skin.cover" v-for="(skin, index) in props.champion.skins" :key="index">
-        </div> -->
     </div>
 </template>
 <style scoped>

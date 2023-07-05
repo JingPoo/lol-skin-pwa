@@ -1,10 +1,7 @@
 <script setup>
-import { ref, computed, onMounted } from "vue"
+import { computed } from "vue"
 import sourceData from '@/data.json'
-import Youtube from 'vue3-youtube'
 
-// const iframeWidth = ref('400')
-// const iframeHeight = ref('200')
 const props = defineProps({
     id: {
         type: Number,
@@ -15,17 +12,6 @@ const props = defineProps({
         required: true
     }
 })
-// onMounted(()=>{
-//     // iframeWidth.value = document.querySelector('.skinImg').width
-//     // iframeHeight.value = document.querySelector('.skinImg').height
-//     window.addEventListener('resize', ()=>{
-//         console.log(document.querySelector('.skinImg').width)
-//         console.log(document.querySelector('.skinImg').height)
-//         console.log(iframeWidth.value, iframeHeight.value)
-//         iframeWidth.value = document.querySelector('.skinImg').width
-//         iframeHeight.value = document.querySelector('.skinImg').height
-//     })
-// })
 const champions = sourceData.champions
 const champion = computed(()=>{
     return champions.find(champion => champion.id === props.id)
@@ -50,13 +36,6 @@ const urlHandler = ((url)=>{
                 <!-- youtube video --> 
                 <div class="video-container">
                     <iframe :src="urlHandler(skin.url)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <!-- <Youtube
-                    class="youtube"
-                    :src="skin.url"
-                    ref="youtube"
-                    :width="iframeWidth"
-                    :height="iframeHeight"
-                ></Youtube> -->
                 </div>
             </div>
         </div>
