@@ -31,13 +31,6 @@ body{
 }
 .view-container{
   width: 100vw;
+  min-width: 300px;
 }
-/* .fade-enter,
-.fade-leave-to{
-  opacity: 0;
-}
-.fade-enter-active,
-.fade-leave-active{
-  transition: opacity .3s;
-} */
 </style>

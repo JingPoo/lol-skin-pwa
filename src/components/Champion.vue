@@ -39,12 +39,13 @@ const bg_css = computed(()=>{
     justify-content: center;
 }
 .cover .text{
-    width: 80%;
+    width: 50%;
     color: white;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.7);
     position: absolute;
-    bottom: -10px;
+    bottom: 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
