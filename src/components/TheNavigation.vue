@@ -88,7 +88,7 @@ const roles = ref([
     box-shadow: 0px 0px 2px var(--main-color);
 }
 .inner-ul > a{
-    width: 60px;
+    width: 70px;
     height: 100%;
     padding: 0px 5px;
     line-height: 50px;
