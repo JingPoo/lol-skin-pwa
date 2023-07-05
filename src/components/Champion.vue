@@ -29,6 +29,8 @@ const bg_css = computed(()=>{
     height: 120px;
     display: flex;
     cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--main-color);
 }
 .cover{
     width: 100%;
