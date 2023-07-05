@@ -1,6 +1,16 @@
 <script setup>
+import { ref } from 'vue'
 import sourceData from '@/data.json'
 const champions = sourceData.champions
+const roles = ref([
+  {id: 1, text:'刺客'},
+  {id: 2, text:'鬥士'},
+  {id: 3, text:'法師'},
+  {id: 4, text:'射手'},
+  {id: 5, text:'輔助'},
+  {id: 6, text:'坦克'}
+])
+
 </script>
 <template>
     <div class="nav-container">

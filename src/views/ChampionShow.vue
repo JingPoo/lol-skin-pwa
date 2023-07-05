@@ -146,7 +146,7 @@ const bg_css = computed(()=>{
     }
     .champion{
         width: 100%;
-        height: 250px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
