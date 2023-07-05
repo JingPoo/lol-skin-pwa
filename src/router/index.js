@@ -6,7 +6,7 @@ import sourceData from '@/data.json'
 // import Caitlyn from '@/views/Caitlyn.vue'
 
 const routes = [
-    {path: '/', name: 'Home', component: Home, alias: '/home'},
+    {path: '/vue-lol-skins/', name: 'Home', component: Home, alias: '/home'},
     // {path: '/aatrox', name: 'aatrox', component: ()=>import('@/views/Aatrox.vue')},
     {
         path: '/vue-lol-skins/champion/:id/:slug', 
