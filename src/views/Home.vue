@@ -68,6 +68,7 @@ const inputHandler = ((event)=>{
 .container{
   width: 100%;
   padding: 10px 20px;
+  
 }
 .top-bar{
   width: 100%;
@@ -78,6 +79,7 @@ const inputHandler = ((event)=>{
 .search-box{
   width: 100%;
   height: 40px;
+  background-color: #fff;
   padding: 4px 8px;
   border: 2px solid #aaa;
   border-radius: 10px 10px 0px 0px;
@@ -120,7 +122,7 @@ const inputHandler = ((event)=>{
 .role-box{
   width: 100%;
   height: 40px;
-  background-color: #dee5ec;
+  background-color: #eee;
   border: 2px solid #aaa;
   border-top: none;
   border-bottom: none;
@@ -152,6 +154,7 @@ const inputHandler = ((event)=>{
 .champion-list{
   width: 100%;
   height: 100%;
+  background-color: #fff;
   border: 2px solid #aaa;
   padding: 20px;
   display: flex;

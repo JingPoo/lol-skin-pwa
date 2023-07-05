@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import sourceData from '@/data.json'
 const champions = sourceData.champions
 const roles = ref([
@@ -10,18 +10,33 @@ const roles = ref([
   {id: 5, text:'輔助'},
   {id: 6, text:'坦克'}
 ])
-
 </script>
 <template>
     <div class="nav-container">
         <router-link id="logo" to="/">Home</router-link>
-        <router-link 
+        <ul class="outer-ul">
+            <li v-for="role in roles" :key="role.id">
+                <a href="javascript:;">{{ role.text }}</a>
+                <ul class="inner-ul">
+                    <router-link 
+                    v-for="champion in champions.filter((champion)=>champion.role === role.text)" 
+                    :key="champion.id"
+                    :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}"
+                    :champion="champion">
+                        {{ champion.name }}
+                    </router-link>
+                </ul>
+                
+            </li>
+                
+        </ul>
+        <!-- <router-link 
         v-for="champion in champions" 
         :key="champion.id"
         :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}"
         :champion="champion">
             {{ champion.name }}
-        </router-link>
+        </router-link> -->
     </div>
 </template>
 <style scoped>
@@ -38,9 +53,59 @@ const roles = ref([
   box-shadow: 0px 0px 5px black;
   z-index: 999;
 }
+.outer-ul{ 
+    width: 360px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+.outer-ul > li{
+    width: 60px;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.outer-ul > li > a{
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+.outer-ul > li:hover .inner-ul > a{
+    display: block;
+}
+.inner-ul{
+    width: auto;
+    height: 50px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 100%;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 2px var(--main-color);
+}
+.inner-ul > a{
+    width: 80px;
+    height: 100%;
+    padding: 0px 5px;
+    line-height: 50px;
+    text-align: center;
+    display: none;
+}
+
 .nav-container a{
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
 .nav-container a:hover{
     color: var(--complement-color);

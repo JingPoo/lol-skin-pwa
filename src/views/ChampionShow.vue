@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue"
+import { ref, computed} from "vue"
 import sourceData from '@/data.json'
 import Skin from '@/components/Skin.vue'
 import GoBack from '@/components/GoBack.vue'
@@ -14,6 +14,7 @@ import GoBack from '@/components/GoBack.vue'
 //         console.log(err)
 //     })
 // }) 
+
 const props = defineProps({
     id: {
         type: Number,
@@ -97,14 +98,9 @@ const bg_css = computed(()=>{
     align-items: center;
     position: relative;
 }
-.go-back{
-    position: absolute;
-    top: -10px;
-    right: -30px;
-}
 .skins{
     width: 100%;
-    background-color: #ddd;
+    background-color: transparent;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -125,9 +121,8 @@ const bg_css = computed(()=>{
     display: flex;
     align-items: center;
     gap: 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
-
 /* For Small Device */
 @media all and (min-width: 414px) and (max-width: 768px){
     
@@ -138,73 +133,9 @@ const bg_css = computed(()=>{
 }
 /* For Large Device */  
 @media all and (min-width: 992px){
-    .champion-page{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .champion{
-        width: 100%;
         height: 300px;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    .champion::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: rgba(255,255,255,.4);
-    }
-    .champion > img{
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        z-index: 1;
-        box-shadow: 0px 0px 10px black;
-    }
-    .champion .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    .go-back{
-        position: absolute;
-        top: -10px;
-        right: -30px;
-    }
-    .skins{
-        width: 100%;
-        background-color: #ddd;
-        padding: 10px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-    .skins > h2{
-        width: 100%;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        color: white;
-        background-color: #272d5b;
-    }
-    .skins .cards{
-        width: 100%;
-        height: 180px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        overflow-x: scroll;
     }
 }
 </style>
