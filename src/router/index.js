@@ -9,7 +9,7 @@ const routes = [
     {path: '/', name: 'Home', component: Home, alias: '/home'},
     // {path: '/aatrox', name: 'aatrox', component: ()=>import('@/views/Aatrox.vue')},
     {
-        path: '/champion/:id/:slug', 
+        path: '/vue-lol-skins/champion/:id/:slug', 
         name: 'champion.show', 
         component: ()=>import('@/views/ChampionShow.vue'), 
         props: route => ({id: parseInt(route.params.id)}),
@@ -34,7 +34,7 @@ const routes = [
         ]
     },
     {
-        path: '/:pathMatch(.*)*', name: 'NotFound', component: ()=>import('@/views/NotFound.vue')
+        path: '/vue-lol-skins/:pathMatch(.*)*', name: 'NotFound', component: ()=>import('@/views/NotFound.vue')
     }
 ]
 
