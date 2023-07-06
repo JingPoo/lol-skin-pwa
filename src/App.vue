@@ -28,6 +28,7 @@ html,body{
 }
 body{
   background: linear-gradient(50deg, rgba(239, 230, 208, 0.756), rgba(224, 203, 155, 0.779));
+  overflow-x: hidden;
 }
 .view-container{
   width: 100vw;
