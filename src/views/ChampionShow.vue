@@ -100,6 +100,8 @@ const bg_css = computed(()=>{
 }
 .skins{
     width: 100%;
+    max-width: 1440px;
+    margin: auto;
     background-color: transparent;
     padding: 10px 20px;
     display: flex;
