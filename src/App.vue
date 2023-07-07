@@ -5,9 +5,11 @@ const route = useRoute()
 </script>
 
 <template>
-  <TheNavigation></TheNavigation>
-  <div class="view-container">
-    <router-view></router-view>
+  <div class="flex flex-col md:grid md:grid-cols-12 absolute top-0 bottom-0 ">
+    <TheNavigation class="col-span-1"></TheNavigation>
+    <div class="view-container col-span-11">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
