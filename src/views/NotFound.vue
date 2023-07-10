@@ -1,17 +1,11 @@
 <template>
-    <div class="container">
-        <h1>Not Found</h1>
+    <div class="w-screen flex flex-col items-center justify-center pt-16">
+        <h1>Page Not Found</h1>
         <p>
             Try going
-            <router-link to="/">Home</router-link>
+            <router-link to="/" class="text-xl font-bold text-orange-400 hover:text-orange-500">Home</router-link>
         </p>
     </div>
 </template>
 <style scoped>
-    .container{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 </style>
