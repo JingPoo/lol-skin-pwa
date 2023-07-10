@@ -56,36 +56,47 @@ const rightName = ((id)=>{
 })
 </script>
 <template>
-    <div class="champion-page">
+    <!-- champion page container -->
+    <div class="w-full flex flex-col items-center">
+
+        <!-- champion block -->
         <!-- 因為共用component，v-if防止轉換時抓不到champion -->
-        <div class="champion" v-if="champion" :style="bg_css">
-            <img :src="champion.cover">
+        <div class="w-full h-52 md:h-[50vh] border-t-8 border-primary flex md:flex-col justify-center items-center gap-4 md:gap-2 relative before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[rgba(255,255,255,.4)]" v-if="champion" :style="bg_css">
+            <img :src="champion.cover" class="w-28 h-28 md:w-36 md:h-36 rounded-full z-10 shadow shadow-black">
+
+            <!-- left button -->
             <router-link 
-            class="left" :to="{name: 'champion.show', params: {id: idbackCount(champion.id), slug: slugbackCount(champion.id)}}">
-                <i class="fa-solid fa-chevron-left"></i>
-                <div class="left-text">
+            class="absolute top-18 md:top-32 left-6 md:left-16 bg-[rgba(255,255,255,.2)] rounded-xl hover:opacity-80 hover:text-primary  hover:-translate-x-2 transition ease-out duration-300 group" :to="{name: 'champion.show', params: {id: idbackCount(champion.id), slug: slugbackCount(champion.id)}}">
+                <svg class="w-10 md:w-12 h-12 md:h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>           
+                <div class="w-max text-xs md:text-lg flex flex-col justify-center items-center pt-2 absolute left-0 invisible group-hover:visible">
                     <h5>{{ leftName(champion.id)}}</h5>
                     <h6>{{ slugbackCount(champion.id) }}</h6>
                 </div>
             </router-link>
+
+            <!-- right button -->
             <router-link 
-            class="right" :to="{name: 'champion.show', params: {id: idnextCount(champion.id), slug: slugnextCount(champion.id)}}">
-                <i class="fa-solid fa-chevron-right"></i>
-                <div class="right-text">
+            class="absolute top-18 md:top-32 right-6 md:right-16 bg-[rgba(255,255,255,.2)] rounded-xl hover:opacity-80 hover:text-primary hover:translate-x-2 transition ease-out duration-300 group" :to="{name: 'champion.show', params: {id: idnextCount(champion.id), slug: slugnextCount(champion.id)}}">
+                <svg class="w-10 md:w-12 h-12 md:h-16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                <div class="w-max text-xs md:text-lg flex flex-col justify-center items-center pt-2  absolute right-0 invisible group-hover:visible">
                     <h5>{{ rightName(champion.id)}}</h5>
                     <h6>{{ slugnextCount(champion.id) }}</h6>
                 </div>
             </router-link>
-            <div class="info">
+
+            <!-- champion info -->
+            <div class="text-black font-bold md:text-xl flex flex-col justify-center items-center z-10">
                 <h1>{{ champion.name }}</h1>
                 <h2>{{ champion.eng }}</h2>
                 <h3>角色定位: {{ champion.role }}</h3>
                 <!-- <GoBack></GoBack> -->
             </div>
         </div>
-        <div class="skins">
-            <h2> Skins of {{ champion.name }}</h2>
-            <div class="cards">
+
+        <!-- skin block -->
+        <div class="skins w-full max-w-screen-xl flex flex-col justify-center items-center">
+            <h2 class="w-full h-10 leading-10 text-center text-lg font-bold text-slate-200 bg-primary"> Skins of {{ champion.name }}</h2>
+            <div class="cards w-full px-6 py-2 flex gap-2 overflow-x-auto">
                 <router-link
                     v-for="(skin, index) in champion.skins"
                     :key="index"
@@ -100,203 +111,4 @@ const rightName = ((id)=>{
     </div>
 </template>
 <style scoped>
-.champion-page{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.champion{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    position: relative;
-}
-.champion::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(255,255,255,.4);
-}
-.champion > img{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    z-index: 1;
-    box-shadow: 0px 0px 10px black;
-}
-.champion .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.champion > a{
-    font-size: 26px;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    transition: .3s;
-}
-.champion > a:hover{
-    color: var(--main-color);
-    opacity: .6;
-}
-.champion > .left{
-    left: 20px;
-}
-.champion > .right{
-    right: 20px;
-}
-.left .left-text,
-.right .right-text{
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: none;
-    position: absolute;
-}
-.left .left-text{
-    left: 0
-}
-.right .right-text{
-    right: 0;
-}
-.champion > .left:hover{
-    transform: translateX(-5px);
-}
-.champion > .left:hover .left-text{
-    display: block;
-}
-.champion > .right:hover{
-    transform: translateX(5px);
-}
-.champion > .right:hover .right-text{
-    display: block;
-}
-.skins{
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    background-color: transparent;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-.skins > h2{
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: white;
-    background-color: #272d5b;
-}
-.skins .cards{
-    width: 100%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    overflow-x: auto;
-}
-
-/* For Small Device */
-@media all and (min-width: 414px) and (max-width: 768px){
-    .champion > a{
-        font-size: 28px;
-    }
-    .champion > .left{
-        left: 30px;
-    }
-    .champion > .right{
-        right: 30px;
-    }
-    .left .left-text,
-    .right .right-text{
-        width: 40px;
-        top: 0;
-    }
-    .left .left-text{
-        left: 20px;
-    }
-    .right .right-text{
-        right: 20px;
-    }
-}
-/* For Medium Device */  
-@media all and (min-width: 768px) and (max-width: 992px){
-    .champion > a{
-        font-size: 32px;
-    }
-    .champion > .left{
-        left: 80px;
-    }
-    .champion > .right{
-        right: 80px;
-    }
-    .left .left-text{
-        font-size: 18px;
-    }
-    .right .right-text{
-        font-size: 18px;
-    }
-    .left .left-text,
-    .right .right-text{
-        width: 40px;
-        top: 0;
-    }
-    .left .left-text{
-        left: 30px;
-    }
-    .right .right-text{
-        right: 30px;
-    }
-}
-/* For Large Device */  
-@media all and (min-width: 992px){
-    .champion{
-        height: 300px;
-        flex-direction: column;
-    }
-    .champion > a{
-        font-size: 38px;
-    }
-    .champion > .left{
-        left: 100px;
-    }
-    .left .left-text{
-        font-size: 24px;
-    }
-    .champion > .right{
-        right: 100px;
-    }
-    .right .right-text{
-        font-size: 24px;
-    }
-    .left .left-text,
-    .right .right-text{
-        width: 80px;
-        top: 0;
-    }
-    .left .left-text{
-        left: 30px;
-    }
-    .right .right-text{
-        right: 30px;
-    }
-}
 </style>
