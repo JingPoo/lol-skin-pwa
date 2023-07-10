@@ -14,94 +14,17 @@ const bg_css = computed(()=>{
 })
 </script>
 <template>
-    <div class="skin_container">
-        <div class="cover" :style="bg_css">
-            <div class="text">
-                <h2>{{ skin.name }}</h2>
-                <h3>{{ skin.eng }}</h3>
+    <!-- skin container -->
+    <div class="w-32 md:w-44 h-24 md:h-32 flex group">
+        <!-- cover -->
+        <div class="w-full h-full relative rounded-lg" :style="bg_css">
+            <!-- text -->
+            <div class="w-full h-full text-xs md:text-sm text-white bg-[rgba(0,0,0,.5)] flex flex-col justify-center items-center rounded-lg p-2 opacity-0 group-hover:opacity-100 transition duration-500">
+                <h2 class="text-center">{{ skin.name }}</h2>
+                <h3 class="text-center">{{ skin.eng }}</h3>
             </div>
         </div>
     </div>
 </template>
 <style scoped>
-.skin_container{
-    width: 200px;
-    height: 150px;
-    display: flex;
-}
-.skin_container:hover .cover .text{
-    opacity: 1;
-}
-.cover{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 10px;
-}
-.cover .text{
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 12px;
-    color: white;
-    background-color: rgba(0,0,0,.5);
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 0px 10px;
-}
-.text h2,
-.text h3{
-    text-align: center;
-}
-
-/* For Small Device */
-@media all and (min-width: 414px) and (max-width: 768px){
-    
-}
-/* For Medium Device */  
-@media all and (min-width: 768px) and (max-width: 992px){
-
-}
-/* For Large Device */  
-@media all and (min-width: 992px){
-    .skin_container{
-        width: 200px;
-        height: 150px;
-        display: flex;
-    }
-    .skin_container:hover .cover .text{
-        opacity: 1;
-    }
-    .cover{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        border-radius: 10px;
-    }
-    .cover .text{
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        font-size: 12px;
-        color: white;
-        background-color: rgba(0,0,0,.5);
-        position: absolute;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        padding: 0px 10px;
-    }
-    .text h2,
-    .text h3{
-        text-align: center;
-    }
-}
 </style>

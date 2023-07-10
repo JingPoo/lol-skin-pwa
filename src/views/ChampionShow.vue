@@ -86,9 +86,9 @@ const rightName = ((id)=>{
 
             <!-- champion info -->
             <div class="text-black font-bold md:text-xl flex flex-col justify-center items-center z-10">
-                <h1>{{ champion.name }}</h1>
-                <h2>{{ champion.eng }}</h2>
-                <h3>角色定位: {{ champion.role }}</h3>
+                <h1 class="text-2xl">{{ champion.name }}</h1>
+                <h2 class="text-sm">{{ champion.eng }}</h2>
+                <h3 class="text-base">角色定位: {{ champion.role }}</h3>
                 <!-- <GoBack></GoBack> -->
             </div>
         </div>
