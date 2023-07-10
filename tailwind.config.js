@@ -28,6 +28,9 @@ module.exports = {
       },
       animation: {
         shake: 'shake .2s linear'
+      },
+      transitionProperty: {
+        'width': 'width',
       }
     },
   },

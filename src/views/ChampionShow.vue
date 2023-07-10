@@ -61,8 +61,8 @@ const rightName = ((id)=>{
 
         <!-- champion block -->
         <!-- 因為共用component，v-if防止轉換時抓不到champion -->
-        <div class="w-full h-52 md:h-[50vh] border-t-8 border-primary flex md:flex-col justify-center items-center gap-4 md:gap-2 relative before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[rgba(255,255,255,.4)]" v-if="champion" :style="bg_css">
-            <img :src="champion.cover" class="w-28 h-28 md:w-36 md:h-36 rounded-full z-10 shadow shadow-black">
+        <div class="w-full h-52 md:h-[50vh] md:border-t-8 border-primary flex md:flex-col justify-center items-center gap-4 md:gap-2 relative before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[rgba(255,255,255,.4)]" v-if="champion" :style="bg_css">
+            <img :src="champion.cover" class="w-28 h-28 md:w-36 md:h-36 rounded-full z-10 shadow shadow-black hover:scale-110 transition duration-200">
 
             <!-- left button -->
             <router-link 
