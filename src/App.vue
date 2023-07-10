@@ -12,7 +12,7 @@ const navShow = ((navShow)=>{
 <template>
   <div class="flex flex-col">
     <TheNavigation @nav-show="navShow"></TheNavigation>
-    <div class="view-container md:ml-24" :class="{'md:ml-0': !showNav}">
+    <div class="view-container w-screen min-w-min md:w-[calc(100%-6rem)] md:ml-24" :class="{'md:!ml-0 md:w-screen': !showNav}">
       <router-view></router-view>
     </div>
   </div>
@@ -32,13 +32,5 @@ const navShow = ((navShow)=>{
 }
 html,body{
   height: 100vh;
-}
-body{
-  background: linear-gradient(50deg, rgba(239, 230, 208, 0.756), rgba(224, 203, 155, 0.779));
-  overflow-x: hidden;
-}
-.view-container{
-  width: 100vw;
-  min-width: 300px;
 }
 </style>

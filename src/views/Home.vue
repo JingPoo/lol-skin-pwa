@@ -33,216 +33,43 @@ const inputHandler = ((event)=>{
 
 <template>
   <!-- 造型價格、英雄排序搜尋、影片內嵌、擁有英雄及造型 -->
-  <div class="container">
-    <div class="top-bar">
-      <div class="search-box" >
-        <i class="search fa-solid fa-magnifying-glass"></i>
-        <input type="text" :value="search" @input="inputHandler" placeholder="英雄搜尋">
-        <i class="clean fa-solid fa-circle-xmark" @click="search = ''" :class="{show: search}"></i>
+  <div class="container w-full max-w-screen-xl px-6 py-4 m-auto">
+
+    <!-- top bar -->
+    <div class="top-bar w-full h-20 flex flex-col bg-white">
+
+      <!-- search box -->
+      <div class="search-box w-full h-10 px-2 py-1 border-2 border-gray-500 rounded-t-lg flex items-center relative group">
+        <svg class="w-6 h-6 text-gray-600 group-hover:text-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+        <input type="text" class="w-full text-lg text-gray-700 ml-2 outline-0 placeholder:italic placeholder:text-gray-600" :value="search" @input="inputHandler" placeholder="英雄搜尋">
+        <!-- clear input text button -->
+        <svg class="w-6 h-6 text-gray-600 hover:text-red-400 cursor-pointer absolute right-2" v-show="search" @click="search = ''"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       </div>
-      
-      <div class="role-box">
+
+      <!-- role box -->
+      <div class="role-box w-full h-10 text-gray-500 font-semibold bg-gray-200 border-x-2 border-gray-500 flex justify-center items-center">
         <button v-for="role in roles" 
           :key="role.id" 
           @click="selectRole = role.text"
-          :class="{active: selectRole === role.text}">
+          class="w-1/7 h-full hover:text-gray-800 hover:font-extrabold"
+          :class="{'text-lg text-gray-800 bg-white font-extrabold': selectRole === role.text}">
           {{ role.text }}
         </button>
       </div>
     </div>
-    <div class="champion-list">
+
+    <!-- champion list container -->
+    <div class="champion-list w-full h-full bg-white border-2 border-gray-500 p-4 flex flex-wrap gap-4">
       <router-link 
         v-for="champion in searchChampions" 
         :key="champion.id"
-        :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}">
-        <Champion :champion="champion" :child="champion.skins"></Champion>
+        :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}"
+        class="m-auto hover:opacity-80 hover:animate-shake">
+        <Champion class="hover:border-4 border-secondary" :champion="champion" :child="champion.skins"></Champion>
       </router-link>
     </div>
   </div>
 </template>
 
 <style scoped>
-*{
-  padding: 0;
-  margin: 0;
-}
-.container{
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding: 10px 20px;
-  
-}
-.top-bar{
-  width: 100%;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-}
-.search-box{
-  width: 100%;
-  height: 40px;
-  background-color: #fff;
-  padding: 4px 8px;
-  border: 2px solid #aaa;
-  border-radius: 10px 10px 0px 0px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.search-box:hover .search{
-  color: var(--second-color);
-}
-.search-box .search{
-  width: 20px;
-  font-size: 20px;
-  color: #aaa;
-}
-.search-box > input{
-  width: calc(100% - 24px);
-  font-size: 20px;
-  font-weight: bolder;
-  padding: 2px 4px;
-  margin-left: 4px;
-  border: none;
-  outline: none;
-}
-.search-box .clean{
-  display: none;
-  width: 20px;
-  font-size: 20px;
-  color: #aaa;
-  position: absolute;
-  right: 5px;
-  cursor: pointer;
-}
-.clean.show{
-  display: block;
-}
-.clean:hover{
-  color: #daa887;
-}
-.role-box{
-  width: 100%;
-  height: 40px;
-  background-color: #eee;
-  border: 2px solid #aaa;
-  border-top: none;
-  border-bottom: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.role-box button{
-  width: calc(100% / 7);
-  height: 100%;
-  font-size: 16px;
-  color: #aaa;
-  background-color: rgba(255,255,255,0);
-  border: none;
-  cursor: pointer;
-}
-.role-box button:hover{
-  color: rgb(105, 104, 104);
-  font-weight: bolder;
-}
-.role-box button.active{
-  position: relative;
-  top: 1px;
-  height: 41px;
-  color: rgb(105, 104, 104);
-  background-color: #fff;
-  font-weight: bolder;
-}
-.champion-list{
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border: 2px solid #aaa;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  border-radius: 0px 0px 10px 10px;
-  /* display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, 1fr); */
-}
-.champion-list > a{
-  margin: auto;
-}
-.champion-list > a:hover{
-  opacity: .8;
-  animation: shake .2s linear;
-}
-@keyframes shake {
-  0%{
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-5px);
-  }
-  100%{
-    opacity: .8;
-    transform: translateY(5px);
-  }
-}
-/* For Small Device */
-@media all and (min-width: 414px) and (max-width: 768px){
-  /* .champion-list{
-    grid-template-columns: repeat(3, 1fr);
-  } */
-}
-/* For Medium Device */  
-@media all and (min-width: 768px) and (max-width: 992px){
-  .top-bar{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-  }
-  .search-box{
-    width: 200px;
-    border-bottom: none;
-    border-radius: 10px 0px 0px;
-  }
-  .role-box{
-    width: calc(100% - 200px);
-    border: 2px solid #aaa;
-    border-left: none;
-    border-bottom: none;
-    border-radius: 0px 10px 0px 0px;
-  }
-  /* .champion-list{
-    grid-template-columns: repeat(4, 1fr);
-  } */
-}
-/* For Large Device */  
-@media all and (min-width: 992px){
-  .top-bar{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-  }
-  .search-box{
-    width: 250px;
-    border-bottom: none;
-    border-radius: 10px 0px 0px;
-  }
-  .role-box{
-    width: calc(100% - 250px);
-    border: 2px solid #aaa;
-    border-left: none;
-    border-bottom: none;
-    border-radius: 0px 10px 0px 0px;
-  }
-  .role-box button{
-    font-size: 20px;
-  }
-  /* .champion-list{
-    grid-template-columns: repeat(5, 1fr);
-  } */
-  }
 </style>
