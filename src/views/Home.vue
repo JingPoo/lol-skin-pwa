@@ -40,6 +40,7 @@ const inputHandler = ((event)=>{
         <input type="text" :value="search" @input="inputHandler" placeholder="英雄搜尋">
         <i class="clean fa-solid fa-circle-xmark" @click="search = ''" :class="{show: search}"></i>
       </div>
+      
       <div class="role-box">
         <button v-for="role in roles" 
           :key="role.id" 

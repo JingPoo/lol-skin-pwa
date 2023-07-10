@@ -1,13 +1,18 @@
 <script setup>
+import { ref, watch } from 'vue'
 import TheNavigation from '@/components/TheNavigation.vue';
 import { useRoute } from 'vue-router';
 const route = useRoute()
+const showNav = ref(true)
+const navShow = ((navShow)=>{
+  showNav.value = navShow
+})
 </script>
 
 <template>
-  <div class="flex flex-col md:grid md:grid-cols-12 absolute top-0 bottom-0 ">
-    <TheNavigation class="col-span-1"></TheNavigation>
-    <div class="view-container col-span-11">
+  <div class="flex flex-col">
+    <TheNavigation @nav-show="navShow"></TheNavigation>
+    <div class="view-container md:ml-24" :class="{'md:ml-0': !showNav}">
       <router-view></router-view>
     </div>
   </div>
