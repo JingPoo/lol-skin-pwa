@@ -24,13 +24,13 @@ const urlHandler = ((url)=>{
 })
 </script>
 <template>
-    <div class="skin-page w-full px-4 pt-4 pb-16">
+    <div class="skin-page w-full px-8 pt-4 pb-16">
         <!-- 因為共用component，v-if防止轉換時抓不到champion -->
         <div class="skins w-full h-max" v-if="skin">
             <!-- text -->
             <div class="w-full flex flex-col justify-center items-center mb-4">
-                <h1 class="text-2xl font-bold">{{ skin.name }}</h1>
-                <h2 class="text-xl">{{ skin.eng }}</h2>
+                <h1 class="text-2xl md:text-4xl font-bold">{{ skin.name }}</h1>
+                <h2 class="text-xl md:text-2xl">{{ skin.eng }}</h2>
             </div>
             <div class=" w-full h-max flex flex-col md:flex-row items-center justify-center gap-2">
                 <!-- img -->

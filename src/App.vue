@@ -12,7 +12,7 @@ const navShow = ((navShow)=>{
 <template>
   <div class="flex flex-col">
     <TheNavigation @nav-show="navShow"></TheNavigation>
-    <div class="view-container w-screen md:w-[calc(100%-6rem)] md:ml-28" :class="{'md:!ml-0 md:w-screen': !showNav}">
+    <div class="view-container w-screen md:w-[calc(100%-10rem)] md:ml-40" :class="{'md:ml-0 md:!w-screen': !showNav}">
       <router-view></router-view>
     </div>
   </div>
