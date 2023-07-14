@@ -25,7 +25,7 @@ const urlHandler = ((url)=>{
 </script>
 <template>
     <div class="skin-page w-full px-8 pt-4 pb-16">
-        <!-- 因為共用component，v-if防止轉換時抓不到champion -->
+        <!-- 因為共用component，v-if防止轉換時抓不到skin -->
         <div class="skins w-full h-max" v-if="skin">
             <!-- text -->
             <div class="w-full flex flex-col justify-center items-center mb-4">
@@ -42,7 +42,6 @@ const urlHandler = ((url)=>{
             </div>
         </div>
     </div>
-    
 </template>
 <style scoped>
 </style>

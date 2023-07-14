@@ -56,7 +56,6 @@ const rightName = ((id)=>{
 })
 </script>
 <template>
-    <!-- champion page container -->
     <div class="w-full flex flex-col items-center">
 
         <!-- champion block -->
@@ -66,9 +65,9 @@ const rightName = ((id)=>{
 
             <!-- left button -->
             <router-link 
-            class="absolute top-18 md:top-48 left-6 md:left-32 bg-[rgba(255,255,255,.2)] rounded-xl hover:opacity-80 hover:text-primary  hover:-translate-x-2 transition ease-out duration-300 group" :to="{name: 'champion.show', params: {id: idbackCount(champion.id), slug: slugbackCount(champion.id)}}">
+            class="absolute top-18 md:top-48 left-6 md:left-32 bg-[rgba(255,255,255,.2)] rounded-xl hover:text-primary hover:bg-[rgba(255,255,255,.6)]  hover:-translate-x-2 transition ease-out duration-300 group" :to="{name: 'champion.show', params: {id: idbackCount(champion.id), slug: slugbackCount(champion.id)}}">
                 <svg class="w-10 md:w-12 h-12 md:h-20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>           
-                <div class="w-max text-xs md:text-lg flex flex-col justify-center items-center pt-2 absolute left-0 invisible group-hover:visible">
+                <div class="w-max text-xs md:text-xl flex flex-col justify-center items-center pt-2 absolute left-0 invisible group-hover:visible">
                     <h5>{{ leftName(champion.id)}}</h5>
                     <h6>{{ slugbackCount(champion.id) }}</h6>
                 </div>
@@ -76,7 +75,7 @@ const rightName = ((id)=>{
 
             <!-- right button -->
             <router-link 
-            class="absolute top-18 md:top-48 right-6 md:right-32 bg-[rgba(255,255,255,.2)] rounded-xl hover:opacity-80 hover:text-primary hover:translate-x-2 transition ease-out duration-300 group" :to="{name: 'champion.show', params: {id: idnextCount(champion.id), slug: slugnextCount(champion.id)}}">
+            class="absolute top-18 md:top-48 right-6 md:right-32 bg-[rgba(255,255,255,.2)] rounded-xl hover:text-primary hover:bg-[rgba(255,255,255,.6)] hover:bg-gray-500 hover:translate-x-2 transition ease-out duration-300 group" :to="{name: 'champion.show', params: {id: idnextCount(champion.id), slug: slugnextCount(champion.id)}}">
                 <svg class="w-10 md:w-12 h-12 md:h-20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
                 <div class="w-max text-xs md:text-lg flex flex-col justify-center items-center pt-2  absolute right-0 invisible group-hover:visible">
                     <h5>{{ rightName(champion.id)}}</h5>
@@ -97,6 +96,7 @@ const rightName = ((id)=>{
         <div class="skins w-full flex flex-col justify-center items-center">
             <h2 class="w-full h-12 md:h-16 leading-[3rem] md:leading-[4rem] text-center text-lg md:text-2xl font-bold text-slate-200 bg-primary"> Skins of {{ champion.name }}</h2>
             <div class="cards w-full px-6 py-2 flex gap-2 overflow-x-auto">
+                
                 <router-link
                     v-for="(skin, index) in champion.skins"
                     :key="index"
@@ -105,9 +105,19 @@ const rightName = ((id)=>{
                     <Skin :skin="skin"></Skin>
                 </router-link>
             </div>
-            <router-view></router-view>
+            <router-view v-slot="{ Component, route }" >
+                <Transition
+                appear
+                mode="out-in"
+                enter-from-class="opacity-0 translate-x-16"
+                enter-active-class="duration-200 ease-out"
+                leave-to-class="opacity-0 -translate-x-16"
+                leave-active-class="duration-200 ease-in"
+                >
+                <component :is="Component" :key="route.path"></component>
+                </Transition>
+            </router-view>
         </div>
-        
     </div>
 </template>
 <style scoped>

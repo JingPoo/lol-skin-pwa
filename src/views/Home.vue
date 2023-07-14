@@ -32,7 +32,6 @@ const inputHandler = ((event)=>{
 </script>
 
 <template>
-  <!-- 造型價格、英雄排序搜尋、影片內嵌、擁有英雄及造型 -->
   <div class="container w-full px-6 py-8 m-auto">
 
     <!-- top bar -->
@@ -52,14 +51,18 @@ const inputHandler = ((event)=>{
           :key="role.id" 
           @click="selectRole = role.text"
           class="w-1/7 h-full text-xl hover:text-gray-800 hover:font-extrabold border-r-2 border-gray-500 first:border-l-0 last:border-r-0"
-          :class="{'!text-2xl text-gray-800 bg-white font-extrabold transition-all duration-150': selectRole === role.text}">
+          :class="{'!text-2xl text-gray-800 bg-white font-extrabold transition-all duration-150 ease-out': selectRole === role.text}">
           {{ role.text }}
         </button>
       </div>
     </div>
 
     <!-- champion list container -->
-    <div class="champion-list w-full h-full bg-white border-2 rounded-b-lg border-gray-500 p-8 flex flex-wrap gap-4">
+    <TransitionGroup appear
+    enter-from-class="opacity-0 scale-50" 
+    enter-to-class="opacity-1 scale-100"
+    enter-active-class="duration-500 ease-out delay-75"
+    tag="div" name="champlist" class="champion-list w-full h-full bg-white border-2 rounded-b-lg border-gray-500 p-8 flex flex-wrap gap-4">
       <router-link 
         v-for="champion in searchChampions" 
         :key="champion.id"
@@ -67,7 +70,7 @@ const inputHandler = ((event)=>{
         class="m-auto hover:opacity-80 hover:animate-shake">
         <Champion class="hover:border-4 border-secondary" :champion="champion" :child="champion.skins"></Champion>
       </router-link>
-    </div>
+    </TransitionGroup>
   </div>
 </template>
 
