@@ -19,6 +19,7 @@ const bg_css = computed(()=>{
                 <h3>{{ champion.name }}</h3>
                 <h3>{{ champion.eng }}</h3>
             </div>
+            <slot></slot>
         </div>
     </div>
 </template>

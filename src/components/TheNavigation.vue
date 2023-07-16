@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref} from 'vue'
 import sourceData from '@/data.json'
 const champions = sourceData.champions
 const roles = ref([
@@ -18,7 +18,7 @@ const clickHandler = (()=>{
 })
 </script>
 <template>
-    <div class="nav-container bg-primary text-white sticky top-0 z-50 md:fixed transition ease-in duration-150" :class="{'md:-translate-x-full': !navShow}">
+    <div class="nav-container min-w-fit bg-primary text-white sticky top-0 z-40 md:fixed transition ease-in duration-150" :class="{'md:-translate-x-full': !navShow}">
         <nav class="h-16 w-full md:h-screen md:w-44 text-md flex flex-row md:flex-col justify-start items-center shadow relative">
             <!-- toggle button -->
             <button class="w-10 h-24 bg-complementary text-black border-y-2 border-r-2 border-primary rounded-r-xl flex justify-center items-center absolute left-full top-8 opacity-80 hover:opacity-70 invisible md:visible" @click="clickHandler">
@@ -44,7 +44,7 @@ const clickHandler = (()=>{
                     </div>
 
                     <!-- second nav -->
-                    <ul  class="bg-secondary z-max w-max absolute top-full md:top-0 md:left-full rounded shadow md:shadow-2xl">
+                    <ul  class="bg-secondary z-40 w-max absolute top-full md:top-0 md:left-full rounded shadow md:shadow-2xl">
                         <li class="h-max md:h-18 p-2 border-2 rounded border-primary hidden group-hover:flex group-hover:flex-col group-hover:items-center group-hover:md:flex-row">
                             <router-link 
                             class="w-max p-2 hover:text-complementary hover:font-bold hover:before:content-['']"
@@ -52,7 +52,6 @@ const clickHandler = (()=>{
                             :key="champion.id"
                             :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}"
                             :champion="champion"
-                            @click="navclickHandler"
                             >
                                 {{ champion.name }}
                             </router-link>

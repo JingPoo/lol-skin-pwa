@@ -26,7 +26,7 @@ const urlHandler = ((url)=>{
 <template>
     <div class="skin-page w-full px-8 pt-4 pb-16">
         <!-- 因為共用component，v-if防止轉換時抓不到skin -->
-        <div class="skins w-full h-max" v-if="skin">
+        <div v-if="skin" class="skins w-full h-max" >
             <!-- text -->
             <div class="w-full flex flex-col justify-center items-center mb-4">
                 <h1 class="text-2xl md:text-4xl font-bold">{{ skin.name }}</h1>
@@ -40,6 +40,9 @@ const urlHandler = ((url)=>{
                     <iframe class="w-full h-full" :src="urlHandler(skin.url)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
+        <div v-else>
+            Loading...
         </div>
     </div>
 </template>
