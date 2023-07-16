@@ -116,7 +116,7 @@ const favorHandler = ((id)=>{
       appear
       enter-from-class="opacity-0 scale-50" 
       enter-active-class="duration-300 ease-out">
-        <div class="w-max h-max z-50 text-xl text-white bg-orange-600 px-6 py-3 rounded-lg absolute top-0 right-0" v-show="msgId !== 0">{{favorIds.includes(msgId) ? '加入' : '取消'}}收藏: {{ msgName }} </div>
+        <div class="w-max h-max z-50 text-xl text-white bg-orange-600 px-6 py-3 rounded-lg fixed top-0 right-0" v-show="msgId !== 0">{{favorIds.includes(msgId) ? '加入' : '取消'}}收藏: {{ msgName }} </div>
       </Transition>
     </Teleport>
   </div>
