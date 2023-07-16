@@ -66,7 +66,7 @@ const favorHandler = ((id)=>{
 </script>
 
 <template>
-  <div class="container w-full min-w-fit px-6 py-8 m-auto">
+  <div class="container w-full min-w-min px-6 py-8 m-auto">
     <!-- top bar -->
     <div class="top-bar w-full h-24 md:h-12 flex flex-col md:flex-row bg-white rounded-t-lg md:rounded-tr-lg">
       <!-- search box -->
@@ -78,7 +78,7 @@ const favorHandler = ((id)=>{
       </div>
 
       <!-- role box -->
-      <div class="role-box w-full h-12 text-gray-500 font-semibold bg-gray-200 border-x-2 md:border-t-2 border-gray-500 md:rounded-tr-lg flex justify-center items-center">
+      <div class="role-box w-full min-w-max h-12 text-gray-500 font-semibold bg-gray-200 border-x-2 md:border-t-2 border-gray-500 md:rounded-tr-lg flex justify-center items-center">
         <button v-for="role in roles" 
         :key="role.id" 
         @click="selectRole = role.text"
