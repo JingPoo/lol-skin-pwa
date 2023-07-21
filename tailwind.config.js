@@ -31,6 +31,9 @@ module.exports = {
       },
       transitionProperty: {
         'width': 'width',
+      },
+      screens: {
+        'sm-h': { 'raw': '(max-height: 800px)' },
       }
     },
   },

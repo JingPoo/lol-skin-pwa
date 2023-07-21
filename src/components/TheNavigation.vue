@@ -38,14 +38,14 @@ const clickHandler = (()=>{
             <!-- first nav -->
             <ul class="w-[calc(100%-2rem)] h-full md:w-full md:h-full mr-8 md:mr-0 md:mt-12 flex flex-row justify-center items-center md:flex-col md:justify-start text-xl">
                 <li v-for="role in roles" :key="role.id" class="w-full h-full md:h-max md:pb-4 leading-8 group relative text-center">
-                    <div class="flex justify-center items-center h-full px-2 md:py-4 cursor-default hover:text-complementary hover:font-bold after:content-[''] after:border-b-2 after:border-complementary after:w-0 aftre:h-1 after:absolute after:bottom-2 hover:after:w-full after:block after:transition-width after:duration-300">
+                    <div class="flex justify-center items-center h-full px-2 md:py-4 sm-h:py-1 cursor-default hover:text-complementary hover:font-bold after:content-[''] after:border-b-2 after:border-complementary after:w-0 aftre:h-1 after:absolute after:bottom-2 hover:after:w-full after:block after:transition-width after:duration-300">
                         <span class="md:hidden">{{ role.text[0] }}</span>
                         <span class="text-2xl hidden md:block">{{ role.text }}</span>
                     </div>
 
                     <!-- second nav -->
                     <ul  class="bg-secondary z-40 w-max absolute top-full md:top-0 md:left-full rounded shadow md:shadow-2xl">
-                        <li class="h-max md:h-18 p-2 border-2 rounded border-primary hidden group-hover:flex group-hover:flex-col group-hover:items-center group-hover:md:flex-row">
+                        <li class="h-max md:h-18 sm-h:h-12 p-2 border-2 rounded border-primary hidden group-hover:flex group-hover:flex-col group-hover:items-center group-hover:md:flex-row">
                             <router-link 
                             class="w-max p-2 hover:text-complementary hover:font-bold hover:before:content-['']"
                             v-for="champion in champions.filter((champion)=>champion.role === role.text)" 

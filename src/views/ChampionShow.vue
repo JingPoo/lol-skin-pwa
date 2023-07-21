@@ -72,7 +72,7 @@ const favorHandler = ((id)=>{
 
         <!-- champion block -->
         <!-- 因為共用component，v-if防止轉換時抓不到champion -->
-        <div v-if="champion" class="w-full h-60 md:h-[50vh] md:border-t-8 border-primary flex md:flex-col justify-center items-center gap-2 md:gap-4 relative before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[rgba(255,255,255,.4)]" :style="bg_css">
+        <div v-if="champion" class="w-full h-60 md:h-[28rem] md:border-t-8 border-primary flex md:flex-col justify-center items-center gap-2 md:gap-4 relative before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-[rgba(255,255,255,.4)]" :style="bg_css">
             <img :src="champion.cover" class="w-36 h-36 md:w-48 md:h-48 rounded-full z-10 shadow shadow-black hover:scale-110 transition duration-200">
 
             <!-- left button -->
