@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed,onBeforeMount} from 'vue'
+import { ref, computed, onBeforeMount} from 'vue'
 import Champion from '/src/components/Champion.vue'
 import sourceData from '@/data.json'
 
@@ -22,6 +22,7 @@ const msgName = ref('')
 const favorIds = ref([])
 onBeforeMount(()=>{
   favorIds.value = JSON.parse(localStorage.getItem('favorId')) || []
+  selectRole.value = JSON.parse(localStorage.getItem('role')) || '全部'
 })
 const searchChampions = computed(()=>{
   // force searchChampions to recompute

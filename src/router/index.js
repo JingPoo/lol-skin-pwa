@@ -3,8 +3,16 @@ import Home from '@/views/Home.vue'
 import sourceData from '@/data.json'
 
 const routes = [
-    {path: '/', redirect: { name: 'Home' }},
-    {path: '/vue-lol-skins/', name: 'Home', component: Home, alias: '/home',},
+    {
+        path: '/', 
+        redirect: { name: 'Home' },
+    },
+    {
+        path: '/vue-lol-skins/', 
+        name: 'Home', 
+        component: Home, 
+        alias: '/home',
+    },
     {
         path: '/vue-lol-skins/champion/:id/:slug', 
         name: 'champion.show', 
