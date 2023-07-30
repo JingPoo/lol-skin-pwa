@@ -125,7 +125,6 @@ const favorHandler = ((id)=>{
         <div v-if="champion" class="skins w-full flex flex-col justify-center items-center">
             <h2 class="w-full h-12 md:h-16 leading-[3rem] md:leading-[4rem] text-center text-lg md:text-2xl font-bold text-slate-200 bg-primary"> Skins of {{ champion.name }}</h2>
             <div class="cards w-full px-6 py-2 flex gap-2 overflow-x-auto">
-                
                 <router-link
                     v-for="(skin, index) in champion.skins"
                     :key="index"

@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
+import ChampionShow from '@/views/ChampionShow.vue'
+import SkinShow from '@/views/SkinShow.vue'
+import NotFound from '@/views/NotFound.vue'
 import sourceData from '@/data.json'
 
 const routes = [
@@ -16,7 +19,7 @@ const routes = [
     {
         path: '/vue-lol-skins/champion/:id/:slug', 
         name: 'champion.show', 
-        component: ()=>import('@/views/ChampionShow.vue'), 
+        component: ChampionShow, 
         props: route => ({id: parseInt(route.params.id)}),
         beforeEnter(to, from){
             const exists = sourceData.champions.find(
@@ -33,13 +36,13 @@ const routes = [
             {
                 path: ':skinSlug', 
                 name: 'skin.show', 
-                component: ()=>import('@/views/SkinShow.vue'), 
+                component: SkinShow, 
                 props: route => ({id: parseInt(route.params.id), skinSlug: route.params.skinSlug}),
             }
         ]
     },
     {
-        path: '/vue-lol-skins/:pathMatch(.*)*', name: 'NotFound', component: ()=>import('@/views/NotFound.vue')
+        path: '/vue-lol-skins/:pathMatch(.*)*', name: 'NotFound', component: NotFound
     }
 ]
 

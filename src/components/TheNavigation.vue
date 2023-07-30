@@ -29,7 +29,7 @@ const navclickHandler = (text)=>{
     <div class="nav-container min-w-fit bg-primary text-white sticky top-0 z-40 md:fixed transition ease-in duration-150" :class="{'md:-translate-x-full': !navShow}">
         <nav class="h-16 w-full md:h-screen md:w-44 text-md flex flex-row md:flex-col justify-start items-center shadow relative">
             <!-- toggle button -->
-            <button class="z-50 w-full h-16 outline-none bg-complementary text-black  flex justify-center items-center absolute left-0 bottom-0  hover:opacity-80 invisible md:visible" :class="{'!w-10 h-full left-full top-0 border-y-2 border-r-2 border-primary rounded-r-2xl': !navShow}" @click="clickHandler">
+            <button class="z-50 w-full h-16 outline-none bg-complementary text-black flex justify-center items-center absolute left-0 bottom-0 hover:opacity-80 invisible md:visible" :class="{'!w-10 h-full left-full top-0 border-y-2 border-r-2 border-primary rounded-r-2xl': !navShow}" @click="clickHandler">
                 <!-- <svg class="w-10 h-10" :class="{'-rotate-180': !navShow}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg> -->
                 <svg class="w-10 h-10" :class="{'-rotate-180': !navShow}" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" ><path stroke-linecap="round" stroke-linejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" /></svg>
             </button>
