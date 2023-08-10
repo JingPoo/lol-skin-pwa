@@ -1,0 +1,125 @@
+{
+    "champions": [
+    {
+      "id": 1,
+      "name": "厄薩斯",
+      "slug": "/aatrox",
+      "eng": "Aatrox",
+      "role": "fighter",
+      "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt570145160dd39dca/5db05fa8347d1c6baa57be25/RiotX_ChampionList_aatrox.jpg?quality=90&width=250",
+      "skins":[
+        {
+          "name": "原始造型",
+          "eng": "Origin",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg"
+        },
+        {
+          "name": "審判者 厄薩斯",
+          "eng": "Justicar Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_2.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_3.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_7.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_8.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_9.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_11.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_20.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_21.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_30.jpg"
+        },
+        {
+          "name": "機甲獵人 厄薩斯",
+          "eng": "Mecha Aatrox",
+          "cover": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_31.jpg"
+        }
+        
+      ]
+    },
+    {
+      "id": 2,
+      "name": "阿璃",
+      "slug": "/ahri",
+      "eng": "Ahri",
+      "role": "mage",
+      "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1259276b6d1efa78/5db05fa86e8b0c6d038c5ca2/RiotX_ChampionList_ahri.jpg?quality=90&width=250",
+      "skins":[
+        {
+          "name": "原始造型",
+          "eng": "Origin",
+          "cover": "/src/assets/Ahri_0.jpg"
+        },
+        {
+          "name": "靈隱狐仙 阿璃",
+          "eng": "Dynasty Ahri",
+          "cover": "/src/assets/Ahri_1.jpg"
+        },
+        {
+          "name": "傾國妖狐 阿璃",
+          "eng": "Midnight Ahri",
+          "cover": "/src/assets/Ahri_2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "凱特琳",
+      "slug": "/caitlyn",
+      "eng": "Caitlyn",
+      "role": "marksman",
+      "cover": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250",
+      "skins":[
+        {
+          "name": "原始造型",
+          "eng": "Origin",
+          "cover": "/src/assets/Caitlyn_0.jpg"
+        },
+        {
+          "name": "政府反抗軍 凱特琳",
+          "eng": "Resistance Caitlyn",
+          "cover": "/src/assets/Caitlyn_1.jpg"
+        },
+        {
+          "name": "荒野保安官 凱特琳",
+          "eng": "Sheriff Caitlyn",
+          "cover": "/src/assets/Caitlyn_2.jpg"
+        }
+      ]
+    }
+  ]
+}

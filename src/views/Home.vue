@@ -16,7 +16,6 @@ const roles = ref([
 ])
 const selectRole = ref('全部')
 const search = ref('')
-const refreshkey = ref(0)
 const msgId = ref(0)
 const msgName = ref('')
 const favorIds = ref([])
@@ -25,15 +24,13 @@ onBeforeMount(()=>{
   selectRole.value = JSON.parse(localStorage.getItem('role')) || '全部'
 })
 const searchChampions = computed(()=>{
-  // force searchChampions to recompute
-  refreshkey.value
   return champions.filter((champion)=>{
     if(selectRole.value === '全部'){
       return (champion.eng.toLowerCase().includes(search.value.toLowerCase()) || champion.name.includes(search.value))
     }
     else if(selectRole.value === '收藏'){
-      let favorIds = JSON.parse(localStorage.getItem('favorId')) || []
-      return favorIds.includes(champion.id) &&
+      favorIds.value = JSON.parse(localStorage.getItem('favorId')) || []
+      return favorIds.value.includes(champion.id) &&
       (champion.eng.toLowerCase().includes(search.value.toLowerCase()) || champion.name.includes(search.value))
     }
     else{
@@ -61,7 +58,6 @@ const favorHandler = ((id)=>{
   }else {
     favorIds.value.splice(favorIndex, 1)
     localStorage.setItem('favorId', JSON.stringify(favorIds.value))
-    refreshkey.value += 1
   }
 })
 const roleclickHandler = (text) => {
