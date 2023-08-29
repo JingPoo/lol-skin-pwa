@@ -97,11 +97,11 @@ const roleclickHandler = (text) => {
     enter-to-class="opacity-1 scale-100"
     enter-active-class="duration-500 ease-out delay-75"
     tag="div" class="champion-list w-full h-full bg-white border-2 rounded-b-lg border-gray-500 p-8 flex flex-wrap gap-4">
-      <div v-for="champion in searchChampions" :key="champion.id" class="relative group hover:animate-shake m-auto">
+      <div v-for="champion in searchChampions" :key="champion.id" class="relative group m-auto">
         <router-link 
           :to="{name: 'champion.show', params: {id: champion.id, slug: champion.eng}}"
           class=" group-hover:opacity-80">
-          <Champion class="group-hover:border-4 border-secondary" :champion="champion" :child="champion.skins"></Champion>
+          <Champion class="group-hover:animate-shake group-hover:border-4 border-secondary" :champion="champion" :child="champion.skins"></Champion>
         </router-link>
 
         <!-- favor button -->
