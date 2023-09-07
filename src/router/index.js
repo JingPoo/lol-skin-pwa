@@ -11,13 +11,13 @@ const routes = [
         redirect: { name: 'Home' },
     },
     {
-        path: '/vue-lol-skins/', 
+        path: '/lol-skin-pwa/', 
         name: 'Home', 
         component: Home, 
         alias: '/home',
     },
     {
-        path: '/vue-lol-skins/champion/:id/:slug', 
+        path: '/lol-skin-pwa/champion/:id/:slug', 
         name: 'champion.show', 
         component: ChampionShow, 
         props: route => ({id: parseInt(route.params.id)}),
@@ -42,7 +42,7 @@ const routes = [
         ]
     },
     {
-        path: '/vue-lol-skins/:pathMatch(.*)*', name: 'NotFound', component: NotFound
+        path: '/lol-skin-pwa/:pathMatch(.*)*', name: 'NotFound', component: NotFound
     }
 ]
 

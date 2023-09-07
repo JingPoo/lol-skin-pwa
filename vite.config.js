@@ -6,7 +6,10 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vue-lol-skins/',
+  base: '/lol-skin-pwa/',
+  test: {
+    globals: true,
+  },
   plugins: [
     vue(),
     VitePWA({
@@ -16,17 +19,17 @@ export default defineConfig({
         theme_color: "#00bd7e",
         icons: [
           {
-            src: "/ls_192.png",
+            src: "./ls_192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/ls_512.png",
+            src: "./ls_512.png",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "/ls_60.png",
+            src: "./ls_60.png",
             sizes: "60x60",
             type: "image/png",
           },
